@@ -21,11 +21,11 @@ const Calculator = () => {
   }
 
   return (
-    <>
+    <div>
       <div className="container" style={{marginTop: "8%"}}>
         <div className="row justify-content-center">
           <div className="col-md-4">
-            <div className="card text-bg-danger">
+            <div className="card text-bg-success">
               <div className="card-body">
                 <h2 className="card-title text-center">Calculator</h2>
                 <input type="text" value={input} disabled className="form-control" />
@@ -94,7 +94,7 @@ const Calculator = () => {
           </div>
         </div>
       </div>
-    </>
+    </div>
   )
 }
 
