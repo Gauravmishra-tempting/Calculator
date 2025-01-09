@@ -20,6 +20,10 @@ const Calculator = () => {
     setInput("");
   }
 
+  const back = () => {
+    setInput(input.slice(0, -1));
+  }
+
   return (
     <div>
       <div className="container" style={{marginTop: "8%"}}>
@@ -73,11 +77,14 @@ const Calculator = () => {
                     </div>
                   </div>
                   <div className="row mt-2">
-                    <div className="col-6">
+                    <div className="col-3">
                       <button onClick={() => handleClick("0")} type='button' className='btn btn-light w-100'>0</button>
                     </div>
                     <div className="col-3">
                       <button onClick={clearInput} type='button' className='btn btn-light w-100'>C</button>
+                    </div>
+                    <div className="col-3">
+                      <button onClick={back} type='button' className='btn btn-light w-100'>Back</button>
                     </div>
                     <div className="col-3">
                       <button onClick={() => handleClick("/")} type='button' className='btn btn-light w-100'>/</button>
