@@ -4,7 +4,14 @@ const Calculator = () => {
   const [input, setInput] = useState("");
 
   const handleClick = (value) => {
+    const operators = ['+', '-', '*', '/'];
+
+    if (operators.includes(value) && operators.includes(input.slice(-1))) {
+      return;
+    }
+    
     setInput(input + value);
+
   };
 
   const calculateResult = () => {
